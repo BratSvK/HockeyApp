@@ -1,0 +1,3 @@
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.csprojAssemblyReference.cache
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.AssemblyInfoInputs.cache
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.AssemblyInfo.cs
