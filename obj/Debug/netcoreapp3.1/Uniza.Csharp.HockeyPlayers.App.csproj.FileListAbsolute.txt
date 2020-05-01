@@ -1,3 +1,15 @@
 C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.csprojAssemblyReference.cache
 C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.AssemblyInfoInputs.cache
 C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.AssemblyInfo.cs
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.exe
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.deps.json
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.runtimeconfig.json
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.runtimeconfig.dev.json
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.dll
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.pdb
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.CSharp.HockeyPlayers.Interfaces.dll
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\bin\Debug\netcoreapp3.1\Uniza.CSharp.HockeyPlayers.Interfaces.xml
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.csproj.CopyComplete
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.dll
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.pdb
+C:\Users\marti\source\repos\Uniza.Csharp.HockeyPlayers.App\obj\Debug\netcoreapp3.1\Uniza.Csharp.HockeyPlayers.App.genruntimeconfig.cache

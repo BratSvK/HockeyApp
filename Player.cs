@@ -10,8 +10,8 @@ namespace Uniza.Csharp.HockeyPlayers.App
     {
         public string FirstName { get; set ; }
         public string LastName { get; set; }
-
-        public string FullName { get; set; }
+       
+        public string FullName => SetFullName().ToString();
 
         public string TitleBefore { get; set; }
         public int YearOfBirth { get; set; }
@@ -19,6 +19,11 @@ namespace Uniza.Csharp.HockeyPlayers.App
         public AgeCategory? AgeCategory { get; set; }
         public IClub Club { get; set; }
 
+        private StringBuilder SetFullName()
+        {
+            StringBuilder fullName = new StringBuilder();
+            return fullName.Append($"{FirstName} {LastName}");
+        }
         public int CompareTo([AllowNull] IPlayer other)
         {
             if (other == null)
@@ -42,8 +47,9 @@ namespace Uniza.Csharp.HockeyPlayers.App
         public override string ToString()
         {
             var titulPredmenom = (TitleBefore != null) ? TitleBefore : "";
-            var plneMeno = FirstName + " " + LastName;
-            return string.Format($"{KrpId} {titulPredmenom} {plneMeno} ({YearOfBirth}), {AgeCategory}, {Club.Name}");
+            return string.Format($"{KrpId} {titulPredmenom} {FullName} ({YearOfBirth}), {AgeCategory}, {Club.Name}");
         }
+
+       
     }
 }

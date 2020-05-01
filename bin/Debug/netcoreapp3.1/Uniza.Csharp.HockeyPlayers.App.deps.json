@@ -1,0 +1,39 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v3.1",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v3.1": {
+      "Uniza.Csharp.HockeyPlayers.App/1.0.0": {
+        "dependencies": {
+          "Uniza.CSharp.HockeyPlayers.Interfaces": "1.0.0.0"
+        },
+        "runtime": {
+          "Uniza.Csharp.HockeyPlayers.App.dll": {}
+        }
+      },
+      "Uniza.CSharp.HockeyPlayers.Interfaces/1.0.0.0": {
+        "runtime": {
+          "Uniza.CSharp.HockeyPlayers.Interfaces.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Uniza.Csharp.HockeyPlayers.App/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "Uniza.CSharp.HockeyPlayers.Interfaces/1.0.0.0": {
+      "type": "reference",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

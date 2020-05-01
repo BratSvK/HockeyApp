@@ -1,0 +1,271 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Uniza.CSharp.HockeyPlayers.Interfaces</name>
+    </assembly>
+    <members>
+        <member name="T:Uniza.CSharp.HockeyPlayers.Interfaces.AgeCategory">
+            <summary>
+            Vekova kategoria.
+            </summary>
+        </member>
+        <member name="F:Uniza.CSharp.HockeyPlayers.Interfaces.AgeCategory.Cadet">
+            <summary>
+            Kadet.
+            </summary>
+        </member>
+        <member name="F:Uniza.CSharp.HockeyPlayers.Interfaces.AgeCategory.Midgest">
+            <summary>
+            Dorastenec.
+            </summary>
+        </member>
+        <member name="F:Uniza.CSharp.HockeyPlayers.Interfaces.AgeCategory.Junior">
+            <summary>
+            Junior.
+            </summary>
+        </member>
+        <member name="F:Uniza.CSharp.HockeyPlayers.Interfaces.AgeCategory.Senior">
+            <summary>
+            Senior.
+            </summary>
+        </member>
+        <member name="T:Uniza.CSharp.HockeyPlayers.Interfaces.IClub">
+            <summary>
+            Klub.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IClub.Name">
+            <summary>
+            Nazov klubu.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IClub.Address">
+            <summary>
+            Adresa klubu.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IClub.Url">
+            <summary>
+            URL odkaz na oficialnu stranku klubu.
+            </summary>
+        </member>
+        <member name="T:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2">
+            <summary>
+            Rozhranie s metodami poskytujucimi data (precvici Vase poznatky pre vytvorenie LINQ dotazov 
+            vracajucich enumerovatelne kolekcie, napr. List a Dictionary).
+            </summary>
+            <typeparam name="TClub">Trieda klubu implementujuca rozhranie <see cref="T:Uniza.CSharp.HockeyPlayers.Interfaces.IClub"/>.</typeparam>
+            <typeparam name="TPlayer">Trieda hraca implementujuca rozhranie <see cref="T:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer"/>.</typeparam>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetClubs">
+            <summary>
+            Vrati vsetky kluby.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetPlayers">
+            <summary>
+            Vrati vsetkych hracov.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetSortedClubs(System.Int32)">
+            <summary>
+            Vrati utriedeny zoznam klubov podla poctu priradenych hracov zostupne 
+            (od klubu s najvacsim poctom hracov po najmensi), pricom vrati prvych n klubov 
+            zadanych podla vstupneho prametra <paramref name="maxResultCount"/>.
+            </summary>
+            <param name="maxResultCount">Celkovy pocet klubov, ktore vrati.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetSortedPlayers(System.Int32)">
+            <summary>
+            Vrati utriedeny zoznam hracov, najskor podla priezviska vzostupne (A - Z), 
+            potom podla mena zostupne (Z - A), pricom vrati prvych n hracov zadanych
+            podla vstupneho parametra <paramref name="maxResultCount"/>.
+            </summary>
+            <param name="maxResultCount">Celkovy pocet hracov, ktorych vrati vo vysledku.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetPlayerAverageAge">
+            <summary>
+            Vrati priemerny vek vsetkych hracov.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetYoungestPlayer">
+            <summary>
+            Vrati najmladsieho hraca zo vsetkych. Ak je viac hracov, ktori maju rovnaky najmladsi vek,
+            vrati hraca, ktory ma najvacsie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetOldestPlayer">
+            <summary>
+            Vrati najstarsieho hraca zo vsetkych. Ak je viac hracov, ktori maju rovnaky najstarsi vek,
+            vrati hraca, ktory ma najvacsie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetBiggestClubPlayerAges">
+            <summary>
+            Vrati vek hracov z najvacsieho klubu (ktory ma najvacsi pocet hracov) bez duplicit
+            utriedeny vzostupne (od najmensieho po najvacsi).
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetGroupedPlayersByYearOfBirth">
+            <summary>
+            Vrati vsetkych hracov zoskupenych podla roku narodenia. Vysledna kolekcia bude utriedena
+            podla roku narodenia vzostupne (od najmensieho po najvacsii).
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetPlayersByAge(System.Int32,System.Int32)">
+            <summary>
+            Vrati vsetkych hracov, ktorych vek je v rozmedzi od <paramref name="minAge"/> vratane do <paramref name="maxAge"/> vratane.
+            </summary>
+            <param name="minAge">Minimalny vek, ktory musia splnat vysledny hraci.</param>
+            <param name="maxAge">Maximalny vek, ktory musia splnat vysledny hraci.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetReportByClub(System.String)">
+            <summary>
+            Vrati report jedneho klubu.
+            </summary>
+            <param name="clubName">Nazov klubu, z ktoreho sa urobi report.</param>
+            <returns></returns>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.GetReportByAgeCategory">
+            <summary>
+            Vrati reporty podla vekovej kategorie. 
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.LoadFromCsv(System.String,System.String)">
+            <summary>
+            Nacita vstupny CSV subor s klubmi.
+            </summary>
+            <param name="clubsCsvFile">Cesta k CSV suboru obsahujucich data klubov.</param>
+            <param name="playersCsvFile">Cesta k CSV suboru obsahujucich data hracov.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.LoadFromXml(System.String)">
+            <summary>
+            Nacita vstupny XML subor obsahujuci data z hracov a klubov.
+            </summary>
+            <param name="fileName">Nazov XML suboru, z ktoreho sa deserializuje zoznam klubov a hracov.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.SaveClubs(System.String)">
+            <summary>
+            Ulozi zoznam klubov do CSV suboru.
+            </summary>
+            <param name="clubsCsvFile">Cesta k CSV suboru, do ktoreho sa ulozi zoznam klubov.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.SavePlayers(System.String)">
+            <summary>
+            Ulozi zoznam hracov do CSV suboru.
+            </summary>
+            <param name="playersCsvFile">Cesta k CSV suboru, do ktoreho sa ulozi zoznam hracov.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.IHockeyReport`2.SaveToXml(System.String)">
+            <summary>
+            Ulozi zoznam klubov a hracov do XML suboru.
+            </summary>
+            <param name="fileName">Nazov XML suboru, do ktoreho sa zoserializuje zoznam klubov a hracov.</param>
+        </member>
+        <member name="T:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer">
+            <summary>
+            Hokejovy hrac.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.FirstName">
+            <summary>
+            Meno hraca.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.LastName">
+            <summary>
+            Priezvisko hraca.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.FullName">
+            <summary>
+            Plne meno v tvare meno a priezvisko: "{<see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.FirstName"/>} {<see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.LastName"/>}". 
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.TitleBefore">
+            <summary>
+            Titul pred.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.YearOfBirth">
+            <summary>
+            Rok narodenia.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId">
+            <summary>
+            Identifikator kmenoveho registracneho preukazu Slovenskeho zvazu ladoveho hokeja. 
+            Zabezpecte, aby bol unikatny a nemohli ste pridat rovnakeho hraca do zoznamu.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.AgeCategory">
+            <summary>
+            Vekova kategoria.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.Club">
+            <summary>
+            Identifikator klubu (cudzi kluc).
+            </summary>
+        </member>
+        <member name="T:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult">
+            <summary>
+            Vysledok reportu.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.TotalPlayerCount">
+            <summary>
+            Celkovy pocet hracov.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.AveragePlayerAge">
+            <summary>
+            Priemerny vek vsetkych hracov.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.YoungestPlayerFullName">
+            <summary>
+            Plne meno (meno a priezvisko) najmladsieho hraca. Ak je viac hracov, ktory maju rovnaky najmladsi vek,
+            vrati hraca, ktory ma najvacsie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.OldestPlayerFullName">
+            <summary>
+            Plne meno (meno a priezvisko) najstarsieho hraca. Ak je viac hracov, ktory maju rovnaky najstarsi vek,
+            vrati hraca, ktory ma najmensie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.YoungestPlayerAge">
+            <summary>
+            Vek najmladsieho hraca.
+            </summary>
+        </member>
+        <member name="P:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.OldestPlayerAge">
+            <summary>
+            Vek najstarsieho hraca.
+            </summary>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.#ctor(System.Int32,System.Nullable{System.Double},System.String,System.String,System.Nullable{System.Int32},System.Nullable{System.Int32})">
+            <summary>
+            Vytvori a inicializuje objekt reportu.
+            </summary>
+            <param name="totalPlayerCount">Celkovy pocet hracov.</param>
+            <param name="averagePlayerAge">Priemerny vek vsetkych hracov.</param>
+            <param name="youngestPlayerFullName">Plne meno (meno a priezvisko) najmladsieho hraca. 
+            Ak je viac hracov, ktory maju rovnaky najmladsi vek, vrati hraca, ktory ma najvacsie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.</param>
+            <param name="oldestPlayerFullName">Plne meno (meno a priezvisko) najstarsieho hraca. 
+            Ak je viac hracov, ktory maju rovnaky najstarsi vek, vrati hraca, ktory ma najmensie <see cref="P:Uniza.CSharp.HockeyPlayers.Interfaces.IPlayer.KrpId"/>.</param>
+            <param name="youngestPlayerAge">Vek najmladsieho hraca.</param>
+            <param name="oldestPlayerAge">Vek najstarsieho hraca.</param>
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.ToString">
+            <inheritdoc />
+        </member>
+        <member name="M:Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult.CompareTo(Uniza.CSharp.HockeyPlayers.Interfaces.ReportResult)">
+            <inheritdoc />
+        </member>
+    </members>
+</doc>
